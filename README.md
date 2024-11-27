@@ -2,6 +2,12 @@
 
 This repository contains my solution for the Sayzek Datathon competition, which focused on detecting four distinct objects in aerial imagery. The challenge presented a significantly imbalanced dataset for building the required detector. To address this challenge, I implemented a comprehensive approach combining multilabel stratified shuffle split for robust and reliable data partitioning along with repeated factor oversampling to handle class imbalance effectively. For model training, I leveraged the RetinaNet architecture with focal loss function, and enhanced the detectron2 Trainer class with an early stopping mechanism for optimal training control. While I cannot share the dataset due to competition restrictions, I have provided detailed information below regarding the required input data format to help you effectively utilize the training and prediction notebooks.
 
+## Model Architecture
+
+The solution utilizes **RetinaNet**, a state-of-the-art object detection architecture from Detectron2's model zoo, known for its efficiency in handling class imbalance through **Focal Loss**.
+
+![retinanet](https://github.com/user-attachments/assets/ac04def7-d74a-46d2-b940-f7cddeeea0e0)
+
 ## Input Data Format
 
 ### Dataset Files
@@ -37,7 +43,4 @@ This repository contains my solution for the Sayzek Datathon competition, which 
 - Early Stopping implementation  
 - RetinaNet architecture from Detectron2 model zoo
 
-## Model Architecture
-
-The solution utilizes **RetinaNet**, a state-of-the-art object detection architecture from Detectron2's model zoo, known for its efficiency in handling class imbalance through **Focal Loss**.
 
