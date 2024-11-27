@@ -1,15 +1,19 @@
 # Aerial Object Detection with Detectron2
 
-**Implementation of a custom object detection model for the Sayzek Datathon competition using the Detectron2 framework.**  
-The solution focuses on detecting 4 distinct objects in aerial imagery using advanced data augmentation and training techniques.
+This repository contains my solution for the Sayzek Datathon competition, which focused on detecting four distinct objects in aerial imagery. While I cannot share the dataset due to competition restrictions, I have provided detailed information below about the required input data format to help you utilize the training and prediction notebooks effectively..
 
 ## Project Structure
 
 ├── TRAIN_DETECTRON2/ # Training images directory
+
 ├── TEST_DETECTRON2/ # Test images directory
+
 ├── train_dataset_detectron2.csv
+
 ├── test_dataset_detectron2.csv
+
 ├── train_meta.csv
+
 └── test_meta.csv
 
 ## Input Data Format
