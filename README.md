@@ -1,4 +1,4 @@
-# Aerial Imagery Object Detection with Detectron2
+# Object Detection with Detectron2 in Aerial Imagery 
 
 This repository contains my solution for the Sayzek Datathon competition, which focused on detecting four distinct objects in aerial imagery. While I cannot share the dataset due to competition restrictions, I have provided detailed information below about the required input data format to help you utilize the training and prediction notebooks effectively.
 
@@ -6,13 +6,14 @@ This repository contains my solution for the Sayzek Datathon competition, which 
 
 ### Dataset Files
 
+- **TRAIN_DETECTRO2** / **TEST_DETECTRON2**:
+  - `image files`
+
 - **train_dataset_detectron2.csv** / **test_dataset_detectron2.csv**:
   - `image_id`
   - `class_name`
   - `class_id`
   - `x_min, y_min, x_max, y_max` (bounding box coordinates)
-
-### Metadata Files
 
 - **train_meta.csv** / **test_meta.csv**:
   - `image_id`
