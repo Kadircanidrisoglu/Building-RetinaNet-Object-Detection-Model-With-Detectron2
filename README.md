@@ -1,13 +1,13 @@
 # Object Detection with Detectron2 in Aerial Imagery 
 
-This repository contains my solution for the Sayzek Datathon competition, which focused on detecting four distinct objects in aerial imagery. While I cannot share the dataset due to competition restrictions, I have provided detailed information below about the required input data format to help you utilize the training and prediction notebooks effectively.
+This repository contains my solution for the Sayzek Datathon competition, which focused on detecting four distinct objects in aerial imagery. The dataset given to us for the detector we needed to build was highly imbalanced. To solve this problem, I used repeated factor oversampling and used the focal loss function using the RetinaNet architecture for model training. I also integrated the early stopping hook into my detectron2 Trainer class. While I cannot share the dataset due to competition restrictions, I have provided detailed information below about the required input data format to help you utilize the training and prediction notebooks effectively.
 
 ## Input Data Format
 
 ### Dataset Files
 
-- **TRAIN_DETECTRO2** / **TEST_DETECTRON2**:
-  - `image files`
+- **TRAIN_DETECTRON2** / **TEST_DETECTRON2**:
+  - `image data folders`
 
 - **train_dataset_detectron2.csv** / **test_dataset_detectron2.csv**:
   - `image_id`
