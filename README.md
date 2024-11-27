@@ -1,152 +1,58 @@
-Aerial Object Detection with Detectron2
+# Aerial Object Detection with Detectron2
 
-Implementation of a custom object detection model for the Sayzek Datathon competition using the Detectron2 framework. The solution focuses on detecting 4 distinct objects in aerial imagery using advanced data augmentation and training techniques.
+**Implementation of a custom object detection model for the Sayzek Datathon competition using the Detectron2 framework.**  
+The solution focuses on detecting 4 distinct objects in aerial imagery using advanced data augmentation and training techniques.
 
-Project Structure
+## Project Structure
 
-├── TRAIN_DETECTRON2/      # Training images directory
-├── TEST_DETECTRON2/       # Test images directory
+├── TRAIN_DETECTRON2/ # Training images directory
+├── TEST_DETECTRON2/ # Test images directory
 ├── train_dataset_detectron2.csv
 ├── test_dataset_detectron2.csv
 ├── train_meta.csv
 └── test_meta.csv
 
-Input Data Format
+## Input Data Format
 
-Dataset Files
+### Dataset Files
 
-train_dataset_detectron2.csv / test_dataset_detectron2.csv:
+- **train_dataset_detectron2.csv** / **test_dataset_detectron2.csv**:
+  - `image_id`
+  - `class_name`
+  - `class_id`
+  - `x_min, y_min, x_max, y_max` (bounding box coordinates)
 
-Column
+### Metadata Files
 
-Description
+- **train_meta.csv** / **test_meta.csv**:
+  - `image_id`
+  - `dim0` (image height)
+  - `dim1` (image width)
 
-image_id
+## Key Features
 
-Unique identifier for each image
+### Custom Training Pipeline
 
-class_name
+- **Advanced Data Augmentation:**  
+  Implemented three distinct augmentation techniques using the Albumentations library.
+  
+- **Class Imbalance Handling:**
+  - Repeated Factor Oversampling
+  - Multilabel Stratified Shuffle Split for robust dataset partitioning
 
-Object class name
+### Training Optimizations
 
-class_id
+- Early Stopping implementation  
+- RetinaNet architecture from Detectron2 model zoo
 
-Object class ID
+## Model Architecture
 
-x_min
+The solution utilizes **RetinaNet**, a state-of-the-art object detection architecture from Detectron2's model zoo, known for its efficiency in handling class imbalance through **Focal Loss**.
 
-Bounding box X-min coordinate
+## Getting Started
 
-y_min
-
-Bounding box Y-min coordinate
-
-x_max
-
-Bounding box X-max coordinate
-
-y_max
-
-Bounding box Y-max coordinate
-
-Metadata Files
-
-train_meta.csv / test_meta.csv:
-
-Column
-
-Description
-
-image_id
-
-Unique identifier for each image
-
-dim0
-
-Image height
-
-dim1
-
-Image width
-
-Key Features
-
-Custom Training Pipeline
-
-Advanced Data Augmentation:
-
-Implemented three distinct augmentation techniques using the Albumentations library.
-
-Class Imbalance Handling:
-
-Repeated Factor Oversampling
-
-Multilabel Stratified Shuffle Split for robust dataset partitioning
-
-Training Optimizations
-
-Early Stopping implementation to avoid overfitting
-
-RetinaNet Architecture from Detectron2 Model Zoo
-
-Model Architecture
-
-The solution utilizes RetinaNet, a state-of-the-art object detection architecture from the Detectron2 Model Zoo. RetinaNet is renowned for its:
-
-Efficiency in handling class imbalance through Focal Loss
-
-Robust performance in object detection tasks
-
-Getting Started
-
-Prepare Your Dataset:
-
-Format your dataset as per the specified schema.
-
-Place images in respective directories:
-
-Training images: TRAIN_DETECTRON2/
-
-Test images: TEST_DETECTRON2/
-
-Ensure CSV Files Match the Required Schema:
-
-train_dataset_detectron2.csv and test_dataset_detectron2.csv
-
-train_meta.csv and test_meta.csv
-
-Dependencies
-
-Detectron2
-
-Albumentations
-
-PyTorch
-
-pandas
-
-numpy
-
-Install required packages via:
-
-pip install detectron2 albumentations torch pandas numpy
-
-Notes
-
-Dataset: Not included due to competition restrictions.
-
-Focus: Custom implementations for handling class imbalance and advanced data augmentation techniques.
-
-Use Case: Solution tailored for aerial imagery object detection tasks.
-
-Model Training
-
-The training pipeline includes:
-
-Custom Data Augmentation Pipeline
-
-Class Balancing Techniques
-
-Early Stopping Mechanism
-
-Stratified Data Splitting
+1. **Prepare your dataset** following the specified format.
+2. **Place images** in respective directories:
+   - Training images in `TRAIN_DETECTRON2/`
+   - Test images in `TEST_DETECTRON2/`
+3. Ensure CSV files match the required schema.
