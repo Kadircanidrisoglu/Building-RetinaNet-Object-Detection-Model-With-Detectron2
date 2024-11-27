@@ -3,7 +3,6 @@
 This repository contains my solution for the Sayzek Datathon competition, which focused on detecting four distinct objects in aerial imagery. The challenge presented a significantly imbalanced dataset for building the required detector. To address this challenge, I implemented a comprehensive approach combining multilabel stratified shuffle split for robust and reliable data partitioning along with repeated factor oversampling to handle class imbalance effectively. For model training, I leveraged the RetinaNet architecture with focal loss function, and enhanced the detectron2 Trainer class with an early stopping mechanism for optimal training control. While I cannot share the dataset due to competition restrictions, I have provided detailed information below regarding the required input data format to help you effectively utilize the training and prediction notebooks.
 
 ## Input Data Format
-![Ekran Görüntüsü (3)](https://github.com/user-attachments/assets/b012f279-2e1b-4705-b6d0-26f22c05e7ff)
 
 ### Dataset Files
 
