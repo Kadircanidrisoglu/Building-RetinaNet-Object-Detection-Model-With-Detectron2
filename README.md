@@ -41,6 +41,5 @@ The solution utilizes **RetinaNet**, a state-of-the-art object detection archite
 
 - Lr schedular
 - Early Stopping implementation  
-- RetinaNet architecture from Detectron2 model zoo
 
 
